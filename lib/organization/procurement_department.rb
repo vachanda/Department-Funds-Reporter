@@ -8,8 +8,8 @@ class Organization::ProcurementDepartment
 		@categories = categories
 	end
 
-	def generate_report(inventory_report)
-		inventory_report.generate_report(self)
+	def generate_report(department)
+		@inventory
 	end
 
 	def inventory_by_colour_and_funding(colour, minimum_funds)

@@ -19,9 +19,14 @@ class Organization::ManagerialDepartment
 		end
 	end
 
+	def generate_report(inventory_report)
+		@sub_departments.inject(0) do |sum, dept|
+			sum + inventory_report.generate_report(dept)
+		end
+	end
+
 	def average_inventory
 		inventory / @sub_departments.length
-		
 	end
 
 	def inventory_by_colour(colour)

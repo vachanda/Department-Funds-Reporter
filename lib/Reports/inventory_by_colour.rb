@@ -7,5 +7,6 @@ class Reports::InventoryByColour
 	def generate_report(department)
 		return 0 unless department.categories["colour"] == @colour
 		department.inventory
+		# inventory += department.generate_report(self)
 	end
 end
